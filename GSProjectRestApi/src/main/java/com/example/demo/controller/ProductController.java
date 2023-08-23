@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Product;
 import com.example.demo.server.ProductService;
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("products")
 
 public class ProductController {
     @Autowired
@@ -21,17 +21,14 @@ public class ProductController {
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
-
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable Long id) {
         return productService.getProductById(id);
     }
-
     @PostMapping
     public Product addProduct(@RequestBody Product product) {
         return productService.saveProduct(product);
     }
-
     @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);

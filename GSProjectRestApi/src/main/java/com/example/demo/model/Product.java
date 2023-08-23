@@ -14,6 +14,7 @@ public class Product {
 	private int id;
 	@Column(name="plantname")
 	private String name;
+	private String plant;
 	private String description;
 	private double price;
 	private int stock;
@@ -28,6 +29,12 @@ public class Product {
 	}
 	public void setname(String name) {
 		this.name=name;
+	}
+	public String getplant() {
+		return plant;
+	}
+	public void getplant(String plant) {
+		this.plant=plant;
 	}
 	public String getdescription() {
 		return description;
@@ -46,5 +53,9 @@ public class Product {
 	}
 	public void setstock(int stock) {
 		this.stock=stock;
+	}
+	public void updateFrom(Product updatedProduct) {
+		// TODO Auto-generated method stub
+		
 	}
 }

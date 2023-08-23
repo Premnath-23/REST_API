@@ -6,7 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 @Entity
-@Table(name="gardenstore")
+@Table(name="gardenstorecategory")
+
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
