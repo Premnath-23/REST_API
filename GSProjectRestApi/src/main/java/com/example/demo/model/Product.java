@@ -1,0 +1,50 @@
+package com.example.demo.model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
+@Entity
+@Table(name="gardenstore")
+
+public class Product {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	@Column(name="plantname")
+	private String name;
+	private String description;
+	private double price;
+	private int stock;
+	public int getid() {
+		return id;
+	}
+	public void setid(int id) {
+		this.id=id;
+	}
+	public String getname() {
+		return name;
+	}
+	public void setname(String name) {
+		this.name=name;
+	}
+	public String getdescription() {
+		return description;
+	}
+	public void setdescription(String description) {
+		this.description=description;
+	}
+	public double getprice() {
+		return price;
+	}
+	public void setprice(double price) {
+		this.price=price;
+	}
+	public int getstock() {
+		return stock;
+	}
+	public void setstock(int stock) {
+		this.stock=stock;
+	}
+}
