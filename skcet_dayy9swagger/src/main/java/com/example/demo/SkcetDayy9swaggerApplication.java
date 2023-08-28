@@ -1,0 +1,26 @@
+package com.example.demo;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+@OpenAPIDefinition(
+		info =@Info(
+				title = "Sample App dp",
+				version = "1.1.2",
+				description = "App Description",
+				contact = @Contact(
+						name = "Author Name",
+						email = "Author Email"
+						)
+				)
+		)
+@SpringBootApplication
+public class SkcetDayy9swaggerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SkcetDayy9swaggerApplication.class, args);
+	}
+
+}
